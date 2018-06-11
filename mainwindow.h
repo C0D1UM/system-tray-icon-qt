@@ -2,7 +2,7 @@
 
 #include <QMainWindow>
 #include <QSystemTrayIcon>
-
+#include <QMenu>
 
 class MainWindow : public QMainWindow
 {
@@ -16,4 +16,7 @@ public slots:
 
 private:
   QSystemTrayIcon* trayIcon;
+  QMenu* trayIconMenu;
+
+  QMenu* createMenu();
 };

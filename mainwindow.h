@@ -1,10 +1,8 @@
 #pragma once
 
 #include <QMainWindow>
+#include <QSystemTrayIcon>
 
-QT_BEGIN_NAMESPACE
-class QSystemTrayIcon;
-QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
@@ -12,6 +10,9 @@ class MainWindow : public QMainWindow
 
 public:
   MainWindow(QWidget *parent = 0);
+
+public slots:
+  void iconActivated(QSystemTrayIcon::ActivationReason);
 
 private:
   QSystemTrayIcon* trayIcon;
